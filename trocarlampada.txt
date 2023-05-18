@@ -1,0 +1,17 @@
+//script para trocar luz
+
+var $temluz; //variável para armazenar o estado na luz
+
+$temluz = ligaluz(); //testa se tem luz e retorna 0 caso não tenha
+
+enquanto($temluz == 0){ //luz não está funcionando
+	escada("sobe");
+	lampada("troca","velha");
+	escada("desce");
+	escada("sobe");
+	lampada("troca","nova");
+	escada("desce");
+	
+	if(ligaluz() != 0){$temluz = 1;}
+}
+senão{echo "a luz acendeu!";) //luz está funcionando
